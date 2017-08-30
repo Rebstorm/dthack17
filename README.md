@@ -13,6 +13,8 @@ Submit your ideas for the City of the Future and take part in the Smart City Pub
 ### What is it about?
 Make life more comfortable for people living in cities – all on the theme of "Smart Public Life." Over the next few weeks, we will present potential topics, technologies and data that could help you develop a good idea and then realize it at the hackathon.
 
+You can find more information on the [official site](https://www.telekom.com/en/company/public-life-hackathon)
+
 ## Dokumentation
 Examples and documentation for the Deutsche Telekom Hackathon on 19/20 September in Bonn
 
