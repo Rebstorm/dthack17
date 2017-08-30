@@ -86,4 +86,6 @@ Maybe you already noticed that the calliope board is based on [Micro:bit](http:/
 
 
 ## Where to start from here
-***TBD***
+* Check out the C++ project template, to compile a programm by yourself:
+  https://github.com/calliope-mini/calliope-project-template
+* More information about the BC95 NB-IoT Module can be found in the [NB-IoT documentation page](nb-iot.md)

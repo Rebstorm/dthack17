@@ -23,6 +23,7 @@ Examples and documentation for the Deutsche Telekom Hackathon on 19/20 September
 
 * [Calliope Board](documentation/calliope.md)
 * [Additional Sensor](documentation/sensors.md)
+* [NB-IoT Module](documentation/nb-iot.md)
 * [Backend](documentation/backend.md)
 
 ## FAQ
