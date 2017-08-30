@@ -4,11 +4,11 @@
 
 Submit your ideas for the City of the Future and take part in the Smart City Public Life Hackathon. Whether you're a developer, a designer or a newbie – we want you!
 
-* **Developers/Professionals** (***only a few left***):
+* **Developers/Professionals** (***only a few left***):  
   Together with your team and a designer, you will develop great ideas and program a prototyping solution within 24 hours.
-* **Designers and concept developers** (***SOLD OUT***):
+* **Designers and concept developers** (***SOLD OUT***):  
   From the ideation phase (led by you) through the implementation of your design idea/ archtiecure or user experience expertise, your know-how is needed in many different ways.
-* **Non-developers/newbies** (***SOLD OUT***)
+* **Non-developers/newbies** (***SOLD OUT***):  
   We have IoT boards for you too, with which you can work as if you were programmer. You will be given an introduction on site and have experienced teammates. Have a try and develop your interest for programming!
 
 [Register directly on eventbrite](https://www.eventbrite.de/e/hackathon-smart-public-life-by-deutsche-telekom-tickets-35258968524)
@@ -26,28 +26,28 @@ Examples and documentation for the Deutsche Telekom Hackathon on 19/20 September
 * [Backend](documentation/backend.md)
 
 ## FAQ
-* Is the Hackathon open source?
+* **Is the Hackathon open source?**  
   Yes, the data and software are completely open source.
-* When and where will the Hackathon take place?
+* **When and where will the Hackathon take place?**  
   Event end: Wednesday, September 20, 2017 at approx. 12:30 p.m.
   Event location:
   Deutsche Telekom AG Headquarters
   Friedrich-Ebert-Allee 140
   53113 Bonn, Germany
-* What is the theme of the hackathon?
+* **What is the theme of the hackathon?**  
   This time, the theme is IoT (Internet of Things): The focus is on connected life in the city (Smart Public Life). IoT boards, sensors, and everything the IoT heart desires. The mission is: to make life in the city more convenient, simpler, and more livable for citizens. But without reinventing the smart street light for the thousandth time.
-* Who can take part?
+* **Who can take part?**
   * Professional developers
   * Trainee developers
   * Designers and concept developers
   * All non-developers (newbies) with an interest in programming
-* I'm not a developer - what can i do to contribute to the Hackathon?
-  * As a newbie (non-developer):
+* **I'm not a developer - what can i do to contribute to the Hackathon?**
+  * **As a newbie (non-developer):**  
   We also have IoT boards for you to work with. You will be given an introduction to the IoT board on site by an expert, who will be available to you at all times as a contact. In addition, you will have designers and concept developers by your side to develop and implement a great idea. The Hackathon won't last 24 hours for newbies. Officially, your coding phase will finish at 5.30 p.m. But you will be free to keep on working on your idea. The next day, you come back for the presentation of results.
-  * As a designer/concept developer:
-  You can support a team in the 24-hour hackathon: starting with the ideation phase, which you will lead, through to implementation of your idea design.
+  * **As a designer/concept developer:**  
+  You can support a team in the 24-hour hackathon: starting with the ideation phase, which you will lead, through to implementation of your idea design.  
   You can support newbies in the ideation phase, help them refine their ideas in the development phase and get them fit for the presentation of results.
-* Who covers the cost of the event?
+* **Who covers the cost of the event?**  
   It is free to take part in the hackathon, and the costs of food and hardware, such as the IoT boards and sensors on site are covered. The travel expenses must be covered by your own.
 
   
