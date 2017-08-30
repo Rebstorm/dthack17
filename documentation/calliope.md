@@ -13,7 +13,7 @@ With the [Calliope mini](https://calliope.cc), you have countless creative possi
 * **Speakers and Microphone:** Using the speakers, you can play music or simple tones. The microphone can record sounds or speech
 * **Sensors:** Motion, acceleration, temperature, and ambient light sensors, as well as a compass offer a number of data points enabling you to realize your ideas
 * **Bluetooth:** The Bluetooth chip allows you to connect the board to a smartphone or tablet. Additionally, you can communicate with other boards
-* **NB-IoT-Module:** Thanks to the NB-IoT-Module you can send collected data to the cloud using mobile data
+* **NB-IoT-Module:** Thanks to the [NB-IoT-Module](nb-iot.md) you can send collected data to the cloud using mobile data
 
 ## Three Ways to Program the Board
 * **Visual Editor:**  
