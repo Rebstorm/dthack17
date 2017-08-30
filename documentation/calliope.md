@@ -1,5 +1,7 @@
 # Callipe Board
 
+![Callipe Board](https://raw.githubusercontent.com/calliope-mini/calliope-mini.github.io/master/assets/v10/img/Calliope_mini_1.0_pinout_fin.jpg)
+
 With the [Calliope mini](https://calliope.cc), you have countless creative possibilities in your hand. Whether you want to build a robot or send messages, you can create your own programs for the microprocessor and get things moving in no time at all with just a few clicks.
 
 ## The IoT-Board Contains The Following Components:
@@ -13,13 +15,13 @@ With the [Calliope mini](https://calliope.cc), you have countless creative possi
 * **NB-IoT-Module:** Thanks to the NB-IoT-Module you can send collected data to the cloud using mobile data
 
 ## Three Ways to Program the Board
-**Visual Editor:**  
+* **Visual Editor:**  
   Even if you are a newbie or are hesitant to code, using the visual editor you can simply program the board using drag & drop  
   **Link: http://pxt.calliope.cc/index.html**  
-**JavaScript:**  
+* **JavaScript:**  
   The easiest way to code for the board is using JavaScript. And you can seamlessly change between the visual editor and JavaScript  
   **Link: http://pxt.calliope.cc/index.html**  
-**C/C++:**  
+* **C/C++:**  
   Your own functions, classes, structures, or shifting bits around: With C or C++ you have full control, and can access all the components on the board. The ARM mbed environment enables you to directly transfer compiled code to the board  
   **Documentation: [Install all dependencies](install_yotta.md), [compile your first programm](https://github.com/calliope-mini/calliope-project-template)**  
 
