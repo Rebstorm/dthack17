@@ -18,7 +18,7 @@ Make life more comfortable for people living in cities – all on the topic of "
 
 You can find more information on the [official site](https://www.telekom.com/en/company/public-life-hackathon)
 
-## Dokumentation
+## Documentation
 Examples and documentation for the Deutsche Telekom Hackathon on 19/20 September in Bonn
 
 * [Calliope Board](documentation/calliope.md)
