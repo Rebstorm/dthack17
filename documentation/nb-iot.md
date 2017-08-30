@@ -17,7 +17,7 @@ If you need more specifications for the BC95 module you can check out the [speci
 
 ## Connection between Calliope and NB-IoT Board
 
-The BC95 development board is connected via uart to the calliope board. The devcelopment board need a higher voltage (+5V) than the calliope is capable (+3.3V), thats the reason why you need an additional power supply exclusivly for the NB-IoT board.
+The BC95 development board is connected via uart to the calliope board. The development board needs a higher voltage (+5V) than the calliope is capable (+3.3V), thats the reason why you need an additional power supply exclusivly for the NB-IoT board.
 
 And example and the wiring of the module can be found in the [official calliope repo](https://github.com/calliope-mini/pxt-calliope-bc95)
 **Note:** Dont connect the VCC of the NB-IoT development board to the calliope board. Otherwise the calliope board will brick.
