@@ -1,6 +1,7 @@
 # Callipe Board
 
-![Callipe Board](https://raw.githubusercontent.com/calliope-mini/calliope-mini.github.io/master/assets/v10/img/Calliope_mini_1.0_pinout_fin.jpg)
+![Callipe Board](https://raw.githubusercontent.com/calliope-mini/calliope-mini.github.io/master/assets/v10/img/Calliope_mini_1.0_pinout_fin.jpg)  
+Source: [Github Calliope Mini](https://github.com/calliope-mini/calliope-mini.github.io)
 
 With the [Calliope mini](https://calliope.cc), you have countless creative possibilities in your hand. Whether you want to build a robot or send messages, you can create your own programs for the microprocessor and get things moving in no time at all with just a few clicks.
 
