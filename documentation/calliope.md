@@ -27,7 +27,7 @@ With the [Calliope mini](https://calliope.cc), you have countless creative possi
   **Documentation: [Install all dependencies](install_yotta.md), [compile your first programm](https://github.com/calliope-mini/calliope-project-template)**  
 
 ## Pros still might want to know:
-The Nordic [nRF51822](https://www.nordicsemi.com/eng/Products/Bluetooth-low-energy/nRF51822) chip used on the board is a Cortex M0 CPU with 16 kB RAM and 256 kB flash memory. Bluetooth is available in Version 4.0, including Low Energy. One SPI and I2C interface each are present and can be used using pins or Grove connectors. The NB-IoT Module ([BC95](http://www.quectel.com/product/gsmevb.htm)) is provided by queltec and it is connected to the board using the UART interface at 96000 Baud and transmits on Band 8 on the 900 MHz Frequency.
+The Nordic [nRF51822](https://www.nordicsemi.com/eng/Products/Bluetooth-low-energy/nRF51822) chip used on the board is a Cortex M0 CPU with 16 kB RAM and 256 kB flash memory. Bluetooth is available in Version 4.0, including Low Energy. One SPI and I2C interface each are present and can be used using pins or Grove connectors. The NB-IoT Module ([BC95](http://www.quectel.com/product/gsmevb.htm)) is provided by queltec and it is connected to the board using the UART interface at 9600 Baud and transmits on Band 8 on the 900 MHz Frequency.
 
 ## Example Projects & More Information:
 * https://www.hackster.io/calliope-mini/
