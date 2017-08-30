@@ -6,7 +6,7 @@ Wikipedia: [NB-IoT](https://en.wikipedia.org/wiki/NarrowBand_IOT)
 
 ## Quectel: BC95 NB-IoT Module
 
-![Quectel BC95 NB-IoT Module](http://www.quectel.com/UploadImage/Product/20170412154839662.png)
+![Quectel BC95 NB-IoT Module](http://www.quectel.com/UploadImage/Product/20170412154839662.png)  
 Source: [Quectel BC95 product page](http://www.quectel.com/product/gsmevb.htm)
 
 > BC95 is a high-performance NB-IoT module with extremely low power consumption. The ultra-compact 19.9 × 23.6 × 2.2mm profile makes it a perfect choice for size sensitive applications. Designed to be compatible with Quectel GSM/GPRS M95 module in the compact and unified form factor, it provides a flexible and scalable platform for migrating from GSM/GPRS to NB-IoT networks.
