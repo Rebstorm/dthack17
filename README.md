@@ -22,7 +22,7 @@ You can find more information on the [official site](https://www.telekom.com/en/
 Examples and documentation for the Deutsche Telekom Hackathon on 19/20 September in Bonn
 
 * [Calliope Board](documentation/calliope.md)
-* [Additional Sensor](documentation/sensors.md)
+* [Additional Sensors](documentation/sensors.md)
 * [NB-IoT Module](documentation/nb-iot.md)
 * [Backend](documentation/backend.md)
 
