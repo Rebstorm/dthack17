@@ -26,6 +26,12 @@ Examples and documentation for the Deutsche Telekom Hackathon on 19/20 September
 * [NB-IoT Module](documentation/nb-iot.md)
 * [Backend](documentation/backend.md)
 
+## Documents
+
+* Ideation phase: [Link](documentation/documents/Ideation.pdf)
+* Ideation method description: [Heaven & Hell](documentation/documents/HeavenandHell_A4_EN.PDF)
+* Route description: [EN](documentation/documents/Anfahrt_SZexe_Bonn_en.pdf) [DE](documentation/documents/Anfahrt_SZex_Bonn_de.pdf)
+
 ## FAQ
 * **Is the Hackathon open source?**  
   Yes, the data and software you use during the hackathon are completely open source.  
