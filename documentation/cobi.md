@@ -9,4 +9,4 @@ We have folks from [COBI](https://www.cobi.bike) on site at our hackathon. They 
 Find their SDK documentation [here](https://github.com/cobi-bike/DevKit).  
 And here's the direct link to their [FAQ](https://github.com/cobi-bike/DevKit/blob/master/FAQ.md).
 
-Please do talk to the nice & cool guys from COBI during our hackathon if you have questions about their product, their app or their SDK
+Please do talk to the nice & cool guys from COBI during our hackathon if you have questions about their product, their app or their SDK.
