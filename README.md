@@ -25,7 +25,7 @@ Examples and documentation for the Deutsche Telekom Hackathon on 19/20 September
 * [Additional Sensors](documentation/sensors.md)
 * [NB-IoT Module](documentation/nb-iot.md)
 * [Backend](documentation/backend.md)
-* [COBI Smart Bike App](documentation/cobi.md)
+* [COBI Smart Bike App SDK](documentation/cobi.md)
 
 ## Documents
 
