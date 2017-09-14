@@ -230,4 +230,4 @@ User: ```telekom```
 Password: ```SmartPublicLife2017```
 
 ## Examples
-For a quick start we recommend the [MQTTBox](http://workswithweb.com/mqttbox.html) that can be downloaded for any platform from [here](http://workswithweb.com/html/mqttbox/downloads.html).
+For a quick start we recommend the [MQTTBox](http://workswithweb.com/mqttbox.html) app that can be downloaded for any platform from [here](http://workswithweb.com/html/mqttbox/downloads.html).
