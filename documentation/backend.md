@@ -51,14 +51,14 @@ Gets all recent data for a specific device (e.g. Calliope Board) that was send t
   * oAuthTokne: ```ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw```
 
 **Request:**
-```
+```bash
 curl -X GET \
   http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
 ```
 
 **Response:**
-```
+```JSON
 [
     {
         "messageId": "1c224044-451b-4064-a2dd-3eb783332a38",
@@ -125,7 +125,7 @@ The request is the same as the ```Device Data``` request, except that you can re
   * pagesize: ```1```
 
 **Request:**
-```
+```bash
 curl -X GET \
   http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/5/1 \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
@@ -148,7 +148,7 @@ The request is the same as the ```Device Data``` request, except that you can re
   * toDate: ```2017-08-21T12:17:07.002Z```
 
 **Request:**
-```
+```bash
 curl -X GET \
   http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/from/2017-08-21T12:17:07.002Z/to/2017-08-21T12:17:07.002Z \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
@@ -169,7 +169,7 @@ The request is the same as the ```Device Data``` request, except that you can re
   * afterDate: ```2017-08-21T12:17:07.002Z```
 
 **Request:**
-```
+```bash
 curl -X GET \
   http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/after/2017-09-14T11:00:03.002Z \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
@@ -190,7 +190,7 @@ The request is the same as the ```Device Data``` request, except that you can re
   * beforeDate: ```2017-08-21T12:17:07.002Z```
 
 **Request:**
-```
+```bash
 curl -X GET \
   http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/before/2017-08-21T12:17:07.002Z \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
@@ -211,7 +211,7 @@ The request is the same as the ```Device Data``` request, except that you can re
   * dayDate: ```2017-08-21T12:17:07.002Z```
 
 **Request:**
-```
+```bash
 curl -X GET \
   http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/day/2017-08-21T12:20:07.002Z \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
