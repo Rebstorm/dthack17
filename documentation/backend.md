@@ -12,7 +12,7 @@ source: Wikipedia [REST](https://en.wikipedia.org/wiki/Representational_state_tr
 We also prepared a [Postman](https://www.getpostman.com) collection for each request for you. [Postman](https://www.getpostman.com) is:
 > A powerful GUI platform to make your API development faster & easier, from building API requests through testing, documentation and sharing.
 
-The collection than be downloaded from [here](documents/dthack17 REST API.postman_collection)
+The collection than be downloaded from [here](documents/dthack17_REST_API.postman_collection)
 
 ### Authentification
 For all of the REST calls there is a auth header needed with the provided oAuth Bearer token. The auth header should be formatted as followed:
