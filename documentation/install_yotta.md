@@ -89,3 +89,9 @@ Maybe you already noticed that the calliope board is based on [Micro:bit](http:/
 * Check out the C++ project template, to compile a programm by yourself:
   https://github.com/calliope-mini/calliope-project-template
 * More information about the BC95 NB-IoT Module can be found in the [NB-IoT documentation page](nb-iot.md)
+
+## How to debug
+The calliope provides are serial interface via the usb port. To read the out of the serial interface you can connect to the board with the following settings (Please note that the name of the serial device can be different from platform to platform but it should start with ```cu.usbmodem***```):
+
+* Mac / Linux: ```screen /dev/cu.usbmodem14232 115200```
+* Windows: We recommend [putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) to access the data from the serial interface. A detailed description can be found [here](debug_windows.md).
