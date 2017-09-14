@@ -26,6 +26,7 @@ Examples and documentation for the Deutsche Telekom Hackathon on 19/20 September
 * [NB-IoT Module](documentation/nb-iot.md)
 * [Backend](documentation/backend.md)
 * [COBI Smart Bike connected biking system SDK](documentation/cobi.md)
+* [Official Repo for the Hackathon from the calliope team with detailed description and additional source code](https://github.com/ubirch/telekom-nbiot-hackathon-2017)
 
 ## Documents
 
