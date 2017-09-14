@@ -6,8 +6,11 @@ There is a backend which can be used to query the sent data of the calliope boar
 
 
 ## How to get the deviceID / hardwareID from your Calliope Board
-To get the ```deviceID``` for your Calliope Board you must first get the ```hardwareID``` from the board itself. To get the ```hardwareID``` just install the [deviceInfo demo hex](https://raw.githubusercontent.com/ubirch/telekom-nbiot-hackathon-2017/master/deviceinfo.hex) on your calliope board. After the file successfully installed there will be a [HEX number](https://en.wikipedia.org/wiki/Hexadecimal) presented on the 5x5 LED matrix (e.g. ```AB12CD34```, please write down the hex number).  
-After you successfully got the ```hardwareID``` login into the [WEB GUI](http://ubirch.demo.ubirch.com/#!/login) with the provided login credentials. Click than "Add Device" and copy&paste the ```hardwareID (hex number)``` you wrote down before and click save. The device is now registered with the backend and you can get the data from the MQTT endpoint or the REST API.
+To get the ```deviceID``` for your Calliope Board you must first get the ```hardwareID``` from the board itself. To get the ```hardwareID``` just install the [deviceInfo demo hex](https://raw.githubusercontent.com/ubirch/telekom-nbiot-hackathon-2017/master/deviceinfo.hex) on your calliope board.   
+  
+After the file successfully installed there will be a [HEX number](https://en.wikipedia.org/wiki/Hexadecimal) presented on the 5x5 LED matrix (e.g. ```AB12CD34```, please write down the hex number).  
+
+After you successfully got the ```hardwareID``` login into the [WEB GUI](http://ubirch.demo.ubirch.com/#!/login) with the provided login credentials. Click than "Add Device" and copy&paste the ```hardwareID (hex number)``` you wrote down before and click save. The device is now registered with the backend and you can get the data from the MQTT endpoint or the REST API.  
 
 The ```deviceID``` that is needed for all requests can be found in the detail site of the device you just added. Just click on your device in the [device list of the WEB GUI](http://ubirch.demo.ubirch.com/#!/devices-list) and in the detail site under ```settings``` and ```developer information``` all needed information for the ```oAuthtoken```, ```deviceID``` and so on are provided there.
 
