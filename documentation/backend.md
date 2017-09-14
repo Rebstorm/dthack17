@@ -217,7 +217,9 @@ Same as with the ```Device Data``` request, with data for a given day
 source: Wikipedia [MQTT](https://en.wikipedia.org/wiki/MQTT)
 
 ## URL's / Endpoints
-The endpoint for the MQTT broker is: ```tcp://mq.demo.ubirch.com:1883```
+The specs for the MQTT broker are as the following: 
+* Host: ```tcp://mq.demo.ubirch.com:1883```
+* Protocol: ```mqtt / tcp```
 
 ## Topics
 For each device there is a topic available. The format for the topic is defined as the following:
