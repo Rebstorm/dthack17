@@ -10,7 +10,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 ## WEB GUI
 There is also a GUI provided for the backend. The GUI can be found [here](http://ubirch.demo.ubirch.com/#!/login)
 
-## REST
+# REST
 > Representational state transfer (REST) or RESTful web services is a way of providing interoperability between computer systems on the Internet. REST-compliant Web services allow requesting systems to access and manipulate textual representations of Web resources using a uniform and predefined set of stateless operations.  
 source: Wikipedia [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)
 
