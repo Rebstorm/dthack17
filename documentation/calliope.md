@@ -33,3 +33,4 @@ The Nordic [nRF51822](https://www.nordicsemi.com/eng/Products/Bluetooth-low-ener
 * https://www.hackster.io/calliope-mini/
 * https://github.com/calliope-mini/
 * https://github.com/calliope-mini/calliope-playground
+* There is also a detailed information for the calliope and bunch of source code examples in the official repo from the callipe team: https://github.com/ubirch/telekom-nbiot-hackathon-2017
