@@ -4,8 +4,11 @@ There is a backend which can be used to query the sent data of the calliope boar
 
 ***Please note:*** Due to the high latency of the NB-IoT network the data will not send within a short time frame. There will always a noticeable delay until the data will be available with the REST or the MQTT API. The minimum will be 1.6s-10.0s seconds or even more. (source Wikipedia: [NarrowBand IoT](https://en.wikipedia.org/wiki/NarrowBand_IOT))
 
-## How to get the device id from your Calliope Board
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+## How to get the device id / hardware from your Calliope Board
+To get the deviceID for your Calliope Board you must first get the Hardware ID from the board itself. To get the Hardware ID just install the [deviceInfo](https://raw.githubusercontent.com/ubirch/telekom-nbiot-hackathon-2017/master/deviceinfo.hex) on your calliope board. After the file successfully installed there will be a [HEX number](https://en.wikipedia.org/wiki/Hexadecimal) presented on the 5x5 LED matrix (e.g. ```AB12CD34```, please write down the hex number).  
+After you successfully got the hardware id login into the [WEB GUI](http://ubirch.demo.ubirch.com/#!/login) with the provided login. credentials. Click than "Add Device" and copy&paste the hex number you wrote down before. The device is now registered with the backend and you can now get the data from the MQTT endpoint or the REST API.
+
+The device id that is needed for all request can be found in the detail site of the device you just added. Just click on your device in the [device list of the WEB GUI](http://ubirch.demo.ubirch.com/#!/devices-list) and on the detail site under ```settings``` and ```developer information``` all needed information for the ```oAuthtoken```, ```deviceID```and so on will be provided there.
 
 ## WEB GUI
 There is also a GUI provided for the backend. The GUI can be found [here](http://ubirch.demo.ubirch.com/#!/login)
@@ -217,7 +220,7 @@ Same as with the ```Device Data``` request, with data for a given day
 source: Wikipedia [MQTT](https://en.wikipedia.org/wiki/MQTT)
 
 ## URL's / Endpoints
-The specs for the MQTT broker are as the following: 
+The specs for the MQTT broker are as the following:
 * Host: ```tcp://mq.demo.ubirch.com:1883```
 * Protocol: ```mqtt / tcp```
 
