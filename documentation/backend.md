@@ -27,9 +27,9 @@ We also prepared a [Postman](https://www.getpostman.com) collection for each req
 
 The collection than be downloaded from [here](documents/dthack17_REST_API.postman_collection)
 
-### Authentification
+### Authorization
 For all of the REST calls there is a auth header needed with the provided oAuth Bearer token. The auth header should be formatted as followed:
-* **Name/Key of the header field:** ```Authorization```
+* **Name/Key of the header field:** ```authorization```
 * **Format of the value:**  ```Bearer 'oAuthtoken'``` e.g. ```Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw```
 
 ### URL's / Endpoints
