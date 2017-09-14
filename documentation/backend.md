@@ -224,7 +224,7 @@ For each device there is a topic available. The format for the topic is defined 
 ```ubirch-demo/ubirch/devices/{{deviceID}}/processed```. Also the ```deviceID``` for the topic is the same a the ```deviceID``` for the REST API requests (e.g. ```a425081d-0737-4e0c-84ba-7137d57b4b10```).
 
 ## Authentification
-User: ```telekom```
+User: ```telekom```  
 Password: ```SmartPublicLife2017```
 
 ## Examples
