@@ -212,20 +212,20 @@ curl -X GET \
 **Response:**
 Same as with the ```Device Data``` request, with data for a given day
 
-## MQTT
+# MQTT
 >MQTT (..) is an ... publish-subscribe-based "lightweight" messaging protocol for use on top of the TCP/IP protocol. It is designed for connections with remote locations where a "small code footprint" is required or the network bandwidth is limited.
 source: Wikipedia [MQTT](https://en.wikipedia.org/wiki/MQTT)
 
-### URL's / Endpoints
+## URL's / Endpoints
 The endpoint for the MQTT broker is: ```tcp://mq.demo.ubirch.com:1883```
 
-### Topics
+## Topics
 For each device there is a topic available. The format for the topic is defined as the following:
 ```ubirch-demo/ubirch/devices/{{deviceID}}/processed```. Also the ```deviceID``` for the topic is the same a the ```deviceID``` for the REST API requests (e.g. ```a425081d-0737-4e0c-84ba-7137d57b4b10```).
 
-### Authentification
+## Authentification
 User: ```telekom```
 Password: ```SmartPublicLife2017```
 
-### Examples
+## Examples
 For a quick start we recommend the [MQTTBox](http://workswithweb.com/mqttbox.html) that can be downloaded for any platform from [here](http://workswithweb.com/html/mqttbox/downloads.html).
