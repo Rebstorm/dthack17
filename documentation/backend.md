@@ -4,14 +4,16 @@ There is a backend which can be used to query the sent data of the calliope boar
 
 ***Please note:*** Due to the high latency of the NB-IoT network the data will not send within a short time frame. There will always a noticeable delay until the data will be available with the REST or the MQTT API. The minimum will be 1.6s-10.0s seconds or even more. (source Wikipedia: [NarrowBand IoT](https://en.wikipedia.org/wiki/NarrowBand_IOT))
 
-## How to get the device id / hardware from your Calliope Board
-To get the deviceID for your Calliope Board you must first get the Hardware ID from the board itself. To get the Hardware ID just install the [deviceInfo](https://raw.githubusercontent.com/ubirch/telekom-nbiot-hackathon-2017/master/deviceinfo.hex) on your calliope board. After the file successfully installed there will be a [HEX number](https://en.wikipedia.org/wiki/Hexadecimal) presented on the 5x5 LED matrix (e.g. ```AB12CD34```, please write down the hex number).  
-After you successfully got the hardware id login into the [WEB GUI](http://ubirch.demo.ubirch.com/#!/login) with the provided login. credentials. Click than "Add Device" and copy&paste the hex number you wrote down before. The device is now registered with the backend and you can now get the data from the MQTT endpoint or the REST API.
 
-The device id that is needed for all request can be found in the detail site of the device you just added. Just click on your device in the [device list of the WEB GUI](http://ubirch.demo.ubirch.com/#!/devices-list) and on the detail site under ```settings``` and ```developer information``` all needed information for the ```oAuthtoken```, ```deviceID```and so on will be provided there.
+## How to get the deviceID / hardwareID from your Calliope Board
+To get the ```deviceID``` for your Calliope Board you must first get the ```hardwareID``` from the board itself. To get the ```hardwareID``` just install the [deviceInfo demo hex](https://raw.githubusercontent.com/ubirch/telekom-nbiot-hackathon-2017/master/deviceinfo.hex) on your calliope board. After the file successfully installed there will be a [HEX number](https://en.wikipedia.org/wiki/Hexadecimal) presented on the 5x5 LED matrix (e.g. ```AB12CD34```, please write down the hex number).  
+After you successfully got the ```hardwareID``` login into the [WEB GUI](http://ubirch.demo.ubirch.com/#!/login) with the provided login credentials. Click than "Add Device" and copy&paste the ```hardwareID (hex number)``` you wrote down before and click save. The device is now registered with the backend and you can get the data from the MQTT endpoint or the REST API.
 
-## WEB GUI
-There is also a GUI provided for the backend. The GUI can be found [here](http://ubirch.demo.ubirch.com/#!/login)
+The ```deviceID``` that is needed for all requests can be found in the detail site of the device you just added. Just click on your device in the [device list of the WEB GUI](http://ubirch.demo.ubirch.com/#!/devices-list) and in the detail site under ```settings``` and ```developer information``` all needed information for the ```oAuthtoken```, ```deviceID``` and so on are provided there.
+
+## WEB GUI Shortcuts:
+* [Login](http://ubirch.demo.ubirch.com/#!/login)
+* [Device list](http://ubirch.demo.ubirch.com/#!/devices-list)
 
 # REST
 > Representational state transfer (REST) or RESTful web services is a way of providing interoperability between computer systems on the Internet. REST-compliant Web services allow requesting systems to access and manipulate textual representations of Web resources using a uniform and predefined set of stateless operations.  
