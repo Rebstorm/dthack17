@@ -28,9 +28,9 @@ For all of the REST calls there is a auth header needed with the provided oAuth 
 The base URL (called apiURL in the following examples) for all of the REST call is:
 * ```http://api.ubirch.demo.ubirch.com:8080```
 
-### Methods
+## Methods
 There are six different request formats to get the data for a specific board. Please note that the response for all of the different requests has the same format.
-#### Device Data
+## Device Data
 Gets all recent data for a specific device (e.g. Calliope Board) that was send to the backend.
 **Request URL:** ```{{apiURL}}/api/avatarService/v1/device/{{deviceID}}/data/history```
 **Parameters**
@@ -103,7 +103,7 @@ curl -X GET \
 ...
 ```
 
-#### Device Data with Page
+## Device Data with Page
 The request is the same as the ```Device Data``` request, except that you can request the data with pages aka pagination.
 **Request URL:** ```{{apiURL}}/api/avatarService/v1/device/{{deviceID}}/data/history/{{from}}/{{pagesize}}```
 **Parameters**
@@ -126,7 +126,7 @@ curl -X GET \
 **Response:**
 Same as with the ```Device Data``` request, except that there is only one item returned
 
-#### Device Data by date
+## Device Data by date
 The request is the same as the ```Device Data``` request, except that you can request the data for a specific date.
 **Request URL:** ```{{apiURL}}/api/avatarService/v1/device/{{deviceID}}/data/history/byDate/from/{{fromDate}}/to/{{toDate}}```
 **Parameters**
@@ -149,7 +149,7 @@ curl -X GET \
 **Response:**
 Same as with the ```Device Data``` request, with data in the give timeframe
 
-#### Device Data after a date
+## Device Data after a date
 The request is the same as the ```Device Data``` request, except that you can request the data after a specific date.
 **Request URL:** ```{{apiURL}}/api/avatarService/v1/device/{{deviceID}}/data/history/byDate/after/{{afterDate}}```
 **Parameters**
@@ -170,7 +170,7 @@ curl -X GET \
 **Response:**
 Same as with the ```Device Data``` request, with data after the give date
 
-#### Device Data before a date
+## Device Data before a date
 The request is the same as the ```Device Data``` request, except that you can request the data before a specific date.
 **Request URL:** ```{{apiURL}}/api/avatarService/v1/device/{{deviceID}}/data/history/byDate/before/{{beforeDate}}```
 **Parameters**
@@ -191,7 +191,7 @@ curl -X GET \
 **Response:**
 Same as with the ```Device Data``` request, with data before the give date
 
-#### Device Data for a day
+## Device Data for a day
 The request is the same as the ```Device Data``` request, except that you can request the data for a specific day.
 **Request URL:** ```{{apiURL}}/api/avatarService/v1/device/{{deviceID}}/data/history/byDate/day/{{dayDate}}```
 **Parameters**
