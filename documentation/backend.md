@@ -222,6 +222,7 @@ Same as with the ```Device Data``` request, with data for a given day
 
 # MQTT
 >MQTT (..) is an ... publish-subscribe-based "lightweight" messaging protocol for use on top of the TCP/IP protocol. It is designed for connections with remote locations where a "small code footprint" is required or the network bandwidth is limited.  
+
 source: Wikipedia [MQTT](https://en.wikipedia.org/wiki/MQTT)
 
 ## URL's / Endpoints
