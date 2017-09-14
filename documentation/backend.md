@@ -2,8 +2,13 @@
 
 There is a backend which can be used to query the sent data of the calliope board. There are also two ways to querying the data. For the history data there is a REST interface and for the "realtime" data is a MQTT endpoint available.
 
+***Please note:*** Due to the high latency of the NB-IoT network the data will not send within a short time frame. There will always a noticeable delay until the data will be available with the REST or the MQTT API. The minimum will be 1.6s-10.0s seconds or even more. (source Wikipedia: [NarrowBand IoT](https://en.wikipedia.org/wiki/NarrowBand_IOT))
+
 ## How to get the device id from your Calliope Board
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+
+## WEB GUI
+There is also a GUI provided for the backend. The GUI can be found [here](http://ubirch.demo.ubirch.com/#!/login)
 
 ## REST
 > Representational state transfer (REST) or RESTful web services is a way of providing interoperability between computer systems on the Internet. REST-compliant Web services allow requesting systems to access and manipulate textual representations of Web resources using a uniform and predefined set of stateless operations.  
@@ -208,9 +213,19 @@ curl -X GET \
 Same as with the ```Device Data``` request, with data for a given day
 
 ## MQTT
+>MQTT (..) is an ... publish-subscribe-based "lightweight" messaging protocol for use on top of the TCP/IP protocol. It is designed for connections with remote locations where a "small code footprint" is required or the network bandwidth is limited.
+source: Wikipedia [MQTT](https://en.wikipedia.org/wiki/MQTT)
 
 ### URL's / Endpoints
+The endpoint for the MQTT broker is: ```tcp://mq.demo.ubirch.com:1883```
 
 ### Topics
+For each device there is a topic available. The format for the topic is defined as the following:
+```ubirch-demo/ubirch/devices/{{deviceID}}/processed```. Also the ```deviceID``` for the topic is the same a the ```deviceID``` for the REST API requests (e.g. ```a425081d-0737-4e0c-84ba-7137d57b4b10```).
 
 ### Authentification
+User: ```telekom```
+Password: ```SmartPublicLife2017```
+
+### Examples
+For a quick start we recommend the [MQTTBox](http://workswithweb.com/mqttbox.html) that can be downloaded for any platform from [here](http://workswithweb.com/html/mqttbox/downloads.html).
