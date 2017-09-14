@@ -1,4 +1,4 @@
-# Calliope for Pro's: Install Guide
+# Calliope for Pro's: Installation and more guide
 
 Before you can start to hack directly on the calliope with `C / C++` you need to install some build tools and software. Everything we need is available from GitHub or other public sites, and best of all its ***open source***.
 
