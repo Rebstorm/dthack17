@@ -4,6 +4,14 @@ There is a backend which can be used to query the data of the calliope board. Th
 
 ***Please note:*** Due to the high latency of the NB-IoT network the data will not send within a short time frame. There will always a noticeable delay until the data will be available with the REST or the MQTT API. The minimum will be 1.6s-10.0s seconds or even more. (source Wikipedia: [NarrowBand IoT](https://en.wikipedia.org/wiki/NarrowBand_IOT))
 
+## What do you need to do?
+To get all needed informations about your account and recieve the sended data there are several steps requirered:
+* Login at the [WEB GUI](http://ubirch.demo.ubirch.com/#!/login) with the given credentials
+* Get your deviceId from the calliope board
+* Create a new Device in the GUI
+* Get all needed informations (tokens, endpoints and so on)
+
+The description for all these steps are noted down in the next topic.
 
 ## How to get the deviceID / hardwareID from your Calliope Board
 To get the ```deviceID``` for your Calliope Board you must first get the ```hardwareID``` from the board itself. To get the ```hardwareID``` just install the [deviceInfo demo hex](https://raw.githubusercontent.com/ubirch/telekom-nbiot-hackathon-2017/master/deviceinfo.hex) on your calliope board.   
