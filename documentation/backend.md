@@ -37,14 +37,14 @@ We also prepared a [Postman](https://www.getpostman.com) collection for each req
 
 The collection than be downloaded from [here](documents/dthack17_REST_API.postman_collection)
 
+### URL's / Endpoints / Tokens
+The base URL (called apiURL in the following examples) for all of the REST calls can be found in the tab "Dev Info's" on the detail site of a defive in the [WebGUI](https://ubirch.demo.ubirch.com/#!/devices-list):
+* ```https://api.ubirch.demo.ubirch.com```
+
 ### Authorization
 For all of the REST calls there is a auth header needed with the provided oAuth Bearer token. The auth header should be formatted as followed:
 * **Name/Key of the header field:** ```authorization```
 * **Format of the value:**  ```Bearer 'oAuthtoken'``` e.g. ```Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw```
-
-### URL's / Endpoints / Tokens
-The base URL (called apiURL in the following examples) for all of the REST calls can be found in the tab "Dev Info's" on the detail site of a defive in the [WebGUI](https://ubirch.demo.ubirch.com/#!/devices-list):
-* ```https://api.ubirch.demo.ubirch.com```
 
 ## Methods
 There are six different request formats to get the data for a specific board. Please note that the response for all of the different requests has the same format.
