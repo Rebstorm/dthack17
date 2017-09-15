@@ -11,7 +11,7 @@ To get all needed informations about your account and recieve the sended data th
 * Create a new Device in the GUI
 * Get all needed informations (tokens, endpoints and so on)
 
-The description for all these steps are noted down in the next topic.
+The description for all these steps are noted down in the next topics.
 
 ## How to get the deviceID / hardwareID from your Calliope Board
 To get the ```deviceID``` for your Calliope Board you must first get the ```hardwareID``` from the board itself. To get the ```hardwareID``` just install the [deviceInfo demo hex](https://raw.githubusercontent.com/ubirch/telekom-nbiot-hackathon-2017/master/deviceinfo.hex) on your calliope board.   
