@@ -22,7 +22,5 @@ An example and the wiring of the module can be found in the [official calliope b
 **Note:** **Don't connect the VCC of the NB-IoT development board to the calliope board. Otherwise the calliope board will brick.**
 
 ## Control the NB-IoT Board
-For further information about the functions and API's for the board check out the examples in the [bc95 calliope repo](https://github.com/calliope-mini/pxt-calliope-bc95)
-* [Visual Editor](https://raw.githubusercontent.com/calliope-mini/pxt-calliope-bc95/master/example.png)
-* [JavaScript](https://github.com/calliope-mini/pxt-calliope-bc95/blob/master/example.ts)
-* [C++](https://github.com/calliope-mini/pxt-calliope-bc95/blob/master/ext_serial.cpp)
+For further information about the functions and API's for the board check out the examples in the [bc95 calliope repo](https://github.com/calliope-mini/pxt-calliope-bc95) or the more [detailed documentation](https://github.com/ubirch/telekom-nbiot-hackathon-2017/blob/master/de-pxt-development.md) about the usage
+
