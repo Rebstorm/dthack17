@@ -16,7 +16,7 @@
 						"type": "text/javascript",
 						"exec": [
 							"// Global variables (same for every request)",
-							"postman.setEnvironmentVariable(\"apiURL\", \"http://api.ubirch.demo.ubirch.com:8080\");",
+							"postman.setEnvironmentVariable(\"apiURL\", \"https://api.ubirch.demo.ubirch.com\");",
 							"postman.setEnvironmentVariable(\"deviceID\", \"a425081d-0737-4e0c-84ba-7137d57b4b10\");",
 							"postman.setEnvironmentVariable(\"oAuthToken\", \"ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw\");"
 						]
@@ -47,7 +47,7 @@
 						"type": "text/javascript",
 						"exec": [
 							"// Global variables (same for every request)",
-							"postman.setEnvironmentVariable(\"apiURL\", \"http://api.ubirch.demo.ubirch.com:8080\");",
+							"postman.setEnvironmentVariable(\"apiURL\", \"https://api.ubirch.demo.ubirch.com\");",
 							"postman.setEnvironmentVariable(\"deviceID\", \"a425081d-0737-4e0c-84ba-7137d57b4b10\");",
 							"postman.setEnvironmentVariable(\"oAuthToken\", \"ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw\");",
 							"",
@@ -82,7 +82,7 @@
 						"type": "text/javascript",
 						"exec": [
 							"// Global variables (same for every request)",
-							"postman.setEnvironmentVariable(\"apiURL\", \"http://api.ubirch.demo.ubirch.com:8080\");",
+							"postman.setEnvironmentVariable(\"apiURL\", \"https://api.ubirch.demo.ubirch.com\");",
 							"postman.setEnvironmentVariable(\"deviceID\", \"a425081d-0737-4e0c-84ba-7137d57b4b10\");",
 							"postman.setEnvironmentVariable(\"oAuthToken\", \"ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw\");",
 							"",
@@ -117,7 +117,7 @@
 						"type": "text/javascript",
 						"exec": [
 							"// Global variables (same for every request)",
-							"postman.setEnvironmentVariable(\"apiURL\", \"http://api.ubirch.demo.ubirch.com:8080\");",
+							"postman.setEnvironmentVariable(\"apiURL\", \"https://api.ubirch.demo.ubirch.com\");",
 							"postman.setEnvironmentVariable(\"deviceID\", \"a425081d-0737-4e0c-84ba-7137d57b4b10\");",
 							"postman.setEnvironmentVariable(\"oAuthToken\", \"ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw\");",
 							"",
@@ -151,7 +151,7 @@
 						"type": "text/javascript",
 						"exec": [
 							"// Global variables (same for every request)",
-							"postman.setEnvironmentVariable(\"apiURL\", \"http://api.ubirch.demo.ubirch.com:8080\");",
+							"postman.setEnvironmentVariable(\"apiURL\", \"https://api.ubirch.demo.ubirch.com\");",
 							"postman.setEnvironmentVariable(\"deviceID\", \"a425081d-0737-4e0c-84ba-7137d57b4b10\");",
 							"postman.setEnvironmentVariable(\"oAuthToken\", \"ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw\");",
 							"",
@@ -185,7 +185,7 @@
 						"type": "text/javascript",
 						"exec": [
 							"// Global variables (same for every request)",
-							"postman.setEnvironmentVariable(\"apiURL\", \"http://api.ubirch.demo.ubirch.com:8080\");",
+							"postman.setEnvironmentVariable(\"apiURL\", \"https://api.ubirch.demo.ubirch.com\");",
 							"postman.setEnvironmentVariable(\"deviceID\", \"a425081d-0737-4e0c-84ba-7137d57b4b10\");",
 							"postman.setEnvironmentVariable(\"oAuthToken\", \"ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw\");",
 							"",
