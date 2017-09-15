@@ -14,6 +14,8 @@ After you successfully got the ```hardwareID``` login into the [WEB GUI](http://
 
 The ```deviceID``` that is needed for all requests can be found in the detail site of the device you just added. Just click on your device in the [device list of the WEB GUI](http://ubirch.demo.ubirch.com/#!/devices-list) and in the detail site under ```settings``` and ```developer information``` all needed information for the ```oAuthtoken```, ```deviceID``` and so on are provided there.
 
+There is also the ability to sing the data with a ecc key. More information about the optional signing can be found [here](https://github.com/ubirch/telekom-nbiot-hackathon-2017/blob/master/de-pxt-development.md#geheimen-schlüssel-erzeugen-optional) 
+
 ## WEB GUI Shortcuts:
 * [Login](http://ubirch.demo.ubirch.com/#!/login)
 * [Device list](http://ubirch.demo.ubirch.com/#!/devices-list)
