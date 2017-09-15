@@ -42,9 +42,9 @@ For all of the REST calls there is a auth header needed with the provided oAuth 
 * **Name/Key of the header field:** ```authorization```
 * **Format of the value:**  ```Bearer 'oAuthtoken'``` e.g. ```Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw```
 
-### URL's / Endpoints
-The base URL (called apiURL in the following examples) for all of the REST call is:
-* ```http://api.ubirch.demo.ubirch.com:8080```
+### URL's / Endpoints / Tokens
+The base URL (called apiURL in the following examples) for all of the REST calls can be found in the tab "Dev Info's" on the detail site of a defive in the [WebGUI](https://ubirch.demo.ubirch.com/#!/devices-list):
+* ```https://api.ubirch.demo.ubirch.com```
 
 ## Methods
 There are six different request formats to get the data for a specific board. Please note that the response for all of the different requests has the same format.
@@ -56,14 +56,14 @@ Gets all recent data for a specific device (e.g. Calliope Board) that was send t
   * deviceID: is the deviceID for your calliope board (see above how to get the deviceId from your board)  
 
 **Example Request**
-  * apiURL: ```http://api.ubirch.demo.ubirch.com:8080```
+  * apiURL: ```https://api.ubirch.demo.ubirch.com```
   * deviviceID: ```a425081d-0737-4e0c-84ba-7137d57b4b10```
   * oAuthTokne: ```ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw```
 
 **Request:**
 ```bash
 curl -X GET \
-  http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history \
+  https://api.ubirch.demo.ubirch.com/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
 ```
 
@@ -137,7 +137,7 @@ The request is the same as the ```Device Data``` request, except that you can re
 **Request:**
 ```bash
 curl -X GET \
-  http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/5/1 \
+  https://api.ubirch.demo.ubirch.com/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/5/1 \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
 ```
 
@@ -160,7 +160,7 @@ The request is the same as the ```Device Data``` request, except that you can re
 **Request:**
 ```bash
 curl -X GET \
-  http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/from/2017-08-21T12:17:07.002Z/to/2017-08-21T12:17:07.002Z \
+  https://api.ubirch.demo.ubirch.com/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/from/2017-08-21T12:17:07.002Z/to/2017-08-21T12:17:07.002Z \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
 ```
 
@@ -181,7 +181,7 @@ The request is the same as the ```Device Data``` request, except that you can re
 **Request:**
 ```bash
 curl -X GET \
-  http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/after/2017-09-14T11:00:03.002Z \
+  https://api.ubirch.demo.ubirch.com/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/after/2017-09-14T11:00:03.002Z \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
 ```
 
@@ -202,7 +202,7 @@ The request is the same as the ```Device Data``` request, except that you can re
 **Request:**
 ```bash
 curl -X GET \
-  http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/before/2017-08-21T12:17:07.002Z \
+  https://api.ubirch.demo.ubirch.com/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/before/2017-08-21T12:17:07.002Z \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
 ```
 
@@ -223,7 +223,7 @@ The request is the same as the ```Device Data``` request, except that you can re
 **Request:**
 ```bash
 curl -X GET \
-  http://api.ubirch.demo.ubirch.com:8080/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/day/2017-08-21T12:20:07.002Z \
+  https://api.ubirch.demo.ubirch.com/api/avatarService/v1/device/a425081d-0737-4e0c-84ba-7137d57b4b10/data/history/byDate/day/2017-08-21T12:20:07.002Z \
   -H 'authorization: Bearer ya29.GlyuBBaWNXuMkcLQaaKj47XRLL6nzt-cIMequoS9mhqoNFyDA289Elhapr2A-3EI-cPArWFW03_zvQPQc8rjkrCSq5XhP0q7nmqFI1A5mV2vRMYlo0mexYRHgZX5Vw'
 ```
 
