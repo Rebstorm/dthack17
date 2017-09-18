@@ -6,7 +6,8 @@ There is a backend which can be used to query the data of the calliope board. Th
 
 ## What do you need to do?
 To get all needed informations about your account and recieve the sended data there are several steps requirered:
-* Login at the [WEB GUI](http://ubirch.demo.ubirch.com/#!/login) with the given credentials
+* Open the [WEB GUI](http://ubirch.demo.ubirch.com/#!/login)
+* Login with your existing Google Account or Create a new "Ubirch" Account (you can create an account an the "ubirch" [login site](https://id.dev.ubirch.com/auth/realms/ubirch/protocol/openid-connect/auth?response_type=code&client_id=ubirch-admin-ui-demo))
 * Get your deviceId from the calliope board
 * Create a new Device in the GUI
 * Get all needed informations (tokens, endpoints and so on)
