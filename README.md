@@ -31,6 +31,7 @@ Examples and documentation for the Deutsche Telekom Hackathon on 19/20 September
 ## Provided 3rd Party Hardware
 We also got some hardware from Anki and COBI. Check also out there documentation:
 * [ANKI Drive](https://github.com/anki/drive-sdk)
+* [ANKI Cozmo](http://cozmosdk.anki.com/docs)
 * [COBI Smart Bike connected biking system SDK](documentation/cobi.md)
 
 ## Documents
