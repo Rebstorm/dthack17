@@ -27,6 +27,7 @@ There is also the ability to sing the data with a ecc key. More information abou
 ## WEB GUI Shortcuts:
 * [Login](http://ubirch.demo.ubirch.com/#!/login)
 * [Device list](http://ubirch.demo.ubirch.com/#!/devices-list)
+* [REST Docu](http://developer.ubirch.com/docs/api/swagger-ui.html)
 
 # REST
 > Representational state transfer (REST) or RESTful web services is a way of providing interoperability between computer systems on the Internet. REST-compliant Web services allow requesting systems to access and manipulate textual representations of Web resources using a uniform and predefined set of stateless operations.  
