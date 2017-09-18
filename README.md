@@ -29,7 +29,7 @@ Examples and documentation for the Deutsche Telekom Hackathon on 19/20 September
 * [Official Repo for the Hackathon from the calliope team with detailed description and additional source code. ALSO A MUST READ!!1!](https://github.com/ubirch/telekom-nbiot-hackathon-2017)
 
 ## Provided 3rd Party Hardware
-We also got some hardware from Anki and COBI. Check also out there documentation:
+We also got some hardware from Anki and COBI. Check out their documentation, too:
 * [ANKI Drive](https://github.com/anki/drive-sdk)
 * [ANKI Cozmo](http://cozmosdk.anki.com/docs)
 * [COBI Smart Bike connected biking system SDK](documentation/cobi.md)
