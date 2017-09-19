@@ -1,23 +1,30 @@
 from xlight.models import TrafficLight
 from random import randint
-from time import sleep
-import threading
+import sched
+import time
 
 
 class XLightHandler ():
 
-    def start_simulation(self):
+    SIMULATION_INTERVAL_S = 2
+
+    def simulate_light_change(self, sc):
         print(len(self.xlights))
+        self.s.enter(self.SIMULATION_INTERVAL_S, 1,
+                     self.simulate_light_change, (sc,))
 
     def __init__(self):
         self.xlights = {}
+        self.s = sched.scheduler(time.time, time.sleep)
         self.on_startup()
 
     def on_startup(self):
         print('-- init demo data')
         self.read_demo_data()
         print('-- init light simulation')
-        threading.Timer(5.0, self.start_simulation).start()
+        self.s.enter(self.SIMULATION_INTERVAL_S, 1,
+                     self.simulate_light_change, (self.s,))
+        self.s.run()
 
     def read_demo_data(self):
         from csv import reader, DictReader
@@ -36,11 +43,7 @@ class XLightHandler ():
             light.location_postcode = row['postcode']
             light.location_streetno = row['no']
             light.beacon_light_distance = row['bld']
-            while True:
-                status = randint(0, 4)
-                if status <= 2:
-                    break
-            light.current_status = status
+            light.current_status = randint(1, 2)
             self.xlights[light.beaconid] = light
 
     def get_xlight_state(self, beaconid):
