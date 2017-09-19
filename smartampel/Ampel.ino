@@ -86,5 +86,5 @@ void loop() {
     Serial.print("Translate: ");
     Serial.println("Gelb blink");
   }
-  delay(2000);                      // Wait for two seconds (to demonstrate the active low LED)
+  delay(500);                      // Wait for two seconds (to demonstrate the active low LED)
 }
