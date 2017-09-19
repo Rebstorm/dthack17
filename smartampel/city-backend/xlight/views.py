@@ -5,8 +5,9 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 import json
 from xlight.xlight_core import XLightHandler
-from xlight.models import TrafficLight, ApiError
+from xlight.models import TrafficLight, ApiStatus
 from re import sub
+from django.core import serializers
 
 
 def cleanup_url_path(url_path):
@@ -38,6 +39,7 @@ class ViewHandler ():
             raise TypeError
 
         beaconid = request.GET.get('beaconid')
+        print('-- beacon id {} requested'.format(beaconid))
         clean_path = cleanup_url_path(request.path)
         if not request.path == clean_path:
             return redirect(clean_path)
@@ -45,15 +47,12 @@ class ViewHandler ():
         if not request.path.endswith('/'):
             request.path = request.path + '/'
 
-        from django.core import serializers
+        xlight = self.xlight_handler.get_xlight_state(beaconid)
+        error = ApiStatus(http_code=200, error_message="")
+        if not xlight:
+            error = ApiStatus(
+                http_code=404, error_message="xlight not registered")
+            xlight = TrafficLight()
 
-        tlight = TrafficLight(
-            beaconid=beaconid,
-            location_street="Musterstraße",
-            location_streetno="100",
-            current_status=0,
-            beacon_light_distance=0
-        )
-        error = ApiError(http_code=200, error_message="-")
-        serialized_data = serializers.serialize("json", [tlight, error])
+        serialized_data = serializers.serialize("json", [xlight, error])
         return HttpResponse(serialized_data, content_type="application/json")
