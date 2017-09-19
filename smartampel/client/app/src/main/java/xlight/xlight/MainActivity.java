@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import xlight.xlight.util.Utility;
 
@@ -42,9 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private void askPermissions() {
         // Fine location request
 
-
-
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
