@@ -1,0 +1,8 @@
+# Rewrite GET-requests to apache to pyntrest instance 
+RewriteEngine On
+RewriteRule ^index\.html$ ""
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ http://localhost:8000/$1 [P]
+
+# Allow SSL termination
+RequestHeader set X-Forwarded-Proto https env=HTTPS
