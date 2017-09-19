@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.altbeacon.beacon.Beacon;
@@ -24,11 +25,14 @@ import org.altbeacon.beacon.BeaconParser;
 import org.altbeacon.beacon.MonitorNotifier;
 import org.altbeacon.beacon.RangeNotifier;
 import org.altbeacon.beacon.Region;
+import org.w3c.dom.Text;
 
 import java.util.Collection;
 
+import xlight.xlight.interfaces.UIUpdater;
 
-public class MainActivity extends AppCompatActivity implements BeaconConsumer {
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,35 +50,19 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
             }
         });
         askPermissions();
-        getBeaconManager();
     }
 
     private void askPermissions() {
         if (ContextCompat.checkSelfPermission(getApplicationContext(),
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
-
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 0 );
-
-
         }
 
     }
 
 
-    private BeaconManager beaconManager;
-    protected static final String TAG = "BluetoothBLEListener";
-    private void getBeaconManager(){
-        try {
-            beaconManager = BeaconManager.getInstanceForApplication(getApplication());
-            beaconManager.getBeaconParsers().add(new BeaconParser()
-                    .setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24"));
-            beaconManager.bind(this);
-            Toast.makeText(getApplicationContext(), "Started listening for iBeacons", Toast.LENGTH_SHORT).show();
-        }catch(Exception e){
-            Log.e(TAG, e.getMessage(), e.getCause());
-        }
-    }
+
 
 
 
@@ -101,46 +89,4 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onBeaconServiceConnect() {
-        beaconManager.addMonitorNotifier(new MonitorNotifier() {
-
-            @Override
-            public void didEnterRegion(Region region) {
-                Toast.makeText(getApplicationContext(),"new region found", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void didExitRegion(Region region) {
-                Toast.makeText(getApplicationContext(),"region exited", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void didDetermineStateForRegion(int i, Region region) {
-                Toast.makeText(getApplicationContext(), "I have just switched from seeing : "+ region.getUniqueId(), Toast.LENGTH_SHORT).show();
-            }
-
-        });
-
-        beaconManager.addRangeNotifier(new RangeNotifier() {
-            @Override
-            public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
-                if(beacons.size() > 0){
-                    Toast.makeText(getApplicationContext(), "The first beacon I see is about "+beacons.iterator().next().getDistance()+" meters away.", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        try {
-            beaconManager.startMonitoringBeaconsInRegion(new Region("1337", null, null, null));
-        } catch (Exception e) {
-
-        }
-
-        try {
-            beaconManager.startRangingBeaconsInRegion(new Region("1337", null, null, null));
-        } catch (RemoteException e) {
-
-        }
-    }
 }
