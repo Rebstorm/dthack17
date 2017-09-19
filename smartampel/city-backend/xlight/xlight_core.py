@@ -2,29 +2,39 @@ from xlight.models import TrafficLight
 from random import randint
 import sched
 import time
+import threading
 
 
 class XLightHandler ():
 
-    SIMULATION_INTERVAL_S = 2
+    SIMULATION_INTERVAL_S = 10
 
-    def simulate_light_change(self, sc):
-        print(len(self.xlights))
-        self.s.enter(self.SIMULATION_INTERVAL_S, 1,
-                     self.simulate_light_change, (sc,))
+    def run_simulator(self):
+        while True:
+            # select a random traffic light
+            len_x = len(self.xlights)
+            rand = randint(0, len_x - 1)
+            xlight_key = list(self.xlights.keys())[rand]
+            xlight = self.xlights[xlight_key]
+
+            # if light is red turn to green and vice versa
+            if xlight.current_status == 2:
+                new_state = 1
+            else:
+                new_state = 2
+
+            # set state to yellow first
+            xlight.current_status = 3
+            time.sleep(2)
+            xlight.current_status = new_state
+            # ------------------------
+            time.sleep(self.SIMULATION_INTERVAL_S)
 
     def __init__(self):
         self.xlights = {}
-        self.s = sched.scheduler(time.time, time.sleep)
-        self.on_startup()
-
-    def on_startup(self):
-        print('-- init demo data')
         self.read_demo_data()
-        print('-- init light simulation')
-        self.s.enter(self.SIMULATION_INTERVAL_S, 1,
-                     self.simulate_light_change, (self.s,))
-        self.s.run()
+        self.sim_thread = threading.Thread(target=self.run_simulator)
+        self.sim_thread.start()
 
     def read_demo_data(self):
         from csv import reader, DictReader
@@ -35,7 +45,6 @@ class XLightHandler ():
 
         lights = []
         for row in csv_in:
-            print(row)
             light = TrafficLight()
             light.beaconid = row['beaconid']
             light.location_city = row['city']
@@ -47,7 +56,6 @@ class XLightHandler ():
             self.xlights[light.beaconid] = light
 
     def get_xlight_state(self, beaconid):
-        print(self.xlights)
         xlight = self.xlights.get(beaconid, None)
         if not xlight:
             return None

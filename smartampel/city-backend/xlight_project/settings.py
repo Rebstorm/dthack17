@@ -14,7 +14,6 @@ INSTALLED_APPS = (
 )
 MIDDLEWARE_CLASSES = ()
 ROOT_URLCONF = 'xlight_project.urls'
-WSGI_APPLICATION = 'xlight_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

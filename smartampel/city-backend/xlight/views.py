@@ -38,15 +38,18 @@ class ViewHandler ():
         if not request:
             raise TypeError
 
-        beaconid = request.GET.get('beaconid')
-        print('-- beacon id {} requested'.format(beaconid))
+    
         clean_path = cleanup_url_path(request.path)
         if not request.path == clean_path:
             return redirect(clean_path)
-
+        
         if not request.path.endswith('/'):
             request.path = request.path + '/'
 
+            
+        beaconid = request.GET.get('beaconid')
+        print('-- beacon id {} requested'.format(beaconid))
+        
         xlight = self.xlight_handler.get_xlight_state(beaconid)
         error = ApiStatus(http_code=200, error_message="")
         if not xlight:
