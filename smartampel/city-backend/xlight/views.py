@@ -4,8 +4,8 @@ from django.shortcuts import redirect, render
 
 from django.http import HttpResponse
 import json
-from ilight.ilight_core import ILightHandler
-from ilight.models import TrafficLight, ApiError
+from xlight.xlight_core import XLightHandler
+from xlight.models import TrafficLight, ApiError
 from re import sub
 
 
@@ -24,12 +24,12 @@ class ViewHandler ():
     """Instances of this class handle incoming GET requests and serve
     the appropriate HTTP responses"""
 
-    ilight_handler = None
+    xlight_handler = None
     """Handler to create the webpage context for incoming GET requests"""
 
     def __init__(self):
         """Constructor"""
-        self.ilight_handler = ILightHandler()
+        self.xlight_handler = XLightHandler()
 
     def get(self, request):
         """This method serves the GET requests to the web photo albums"""

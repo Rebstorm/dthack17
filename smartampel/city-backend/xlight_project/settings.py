@@ -1,4 +1,4 @@
-"""Project settings for ilight"""
+"""Project settings for xlight"""
 
 import os
 
@@ -10,15 +10,15 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = (
     'django.contrib.staticfiles',
-    'ilight'
+    'xlight'
 )
 MIDDLEWARE_CLASSES = ()
-ROOT_URLCONF = 'ilight_project.urls'
-WSGI_APPLICATION = 'ilight_project.wsgi.application'
+ROOT_URLCONF = 'xlight_project.urls'
+WSGI_APPLICATION = 'xlight_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3.ilight_project')
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3.xlight_project')
     }
 }
 TEMPLATE_CONTEXT_PROCESSORS = {
@@ -35,4 +35,4 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 STATIC_URL = '/static/'
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'ilight', 'static')]
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'xlight', 'static')]

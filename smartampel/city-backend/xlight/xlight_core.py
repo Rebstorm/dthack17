@@ -1,4 +1,4 @@
-class ILightHandler ():
+class XLightHandler ():
 
     def __init__(self):
         """Constructor"""

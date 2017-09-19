@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     from bptbx import b_iotools
 
-    environ.setdefault("DJANGO_SETTINGS_MODULE", "ilight_project.settings")
+    environ.setdefault("DJANGO_SETTINGS_MODULE", "xlight_project.settings")
 
     import_success, failed_modules = b_iotools.import_modules_with_check(
         ['django.http'])
