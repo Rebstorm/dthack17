@@ -93,6 +93,7 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
         int txPower;
         int rssi;
         int remoteState;
+        String location;
         boolean remoteKnown;
         boolean lightNearby;
         
@@ -108,6 +109,7 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
                 sb.append("\n");
                 sb.append("REM-KNOWN=").append(remoteKnown).append("\n");
                 sb.append("REM-STATE=").append(remoteState).append("\n");
+                sb.append("LOCATION =").append(location).append("\n");
                 sb.append("LIGHT @ ").append(LIGHT_STATES.values()[remoteState]);
             }
             return sb.toString();
@@ -192,6 +194,10 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
                                 state.remoteKnown = true;
                                 state.remoteState = Integer.parseInt(
                                         payload.get("current_status").toString());
+                                state.location = payload.get("location_street") + " " +
+                                        payload.get("location_streetno") + ", " +
+                                        payload.get("location_postcode") + " " +
+                                        payload.get("location_city");
                                 
                             } catch (Exception e) {
                                 Log.e(TAG, e.getMessage());
