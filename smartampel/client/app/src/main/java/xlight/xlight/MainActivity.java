@@ -1,8 +1,14 @@
 package xlight.xlight;
 
+import android.Manifest;
+import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -11,11 +17,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import org.altbeacon.beacon.Beacon;
 import org.altbeacon.beacon.BeaconConsumer;
 import org.altbeacon.beacon.BeaconManager;
 import org.altbeacon.beacon.BeaconParser;
 import org.altbeacon.beacon.MonitorNotifier;
+import org.altbeacon.beacon.RangeNotifier;
 import org.altbeacon.beacon.Region;
+
+import java.util.Collection;
 
 
 public class MainActivity extends AppCompatActivity implements BeaconConsumer {
@@ -31,12 +41,24 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Restarted beacon process", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
-
+        askPermissions();
         getBeaconManager();
+    }
+
+    private void askPermissions() {
+        if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 0 );
+
+
+        }
+
     }
 
 
@@ -82,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
     @Override
     public void onBeaconServiceConnect() {
         beaconManager.addMonitorNotifier(new MonitorNotifier() {
+
             @Override
             public void didEnterRegion(Region region) {
                 Toast.makeText(getApplicationContext(),"new region found", Toast.LENGTH_SHORT).show();
@@ -94,8 +117,30 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
 
             @Override
             public void didDetermineStateForRegion(int i, Region region) {
-                Toast.makeText(getApplicationContext(), "I have just switched from seeing/not seeing beacons: "+ i, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "I have just switched from seeing : "+ region.getUniqueId(), Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+        beaconManager.addRangeNotifier(new RangeNotifier() {
+            @Override
+            public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
+                if(beacons.size() > 0){
+                    Toast.makeText(getApplicationContext(), "The first beacon I see is about "+beacons.iterator().next().getDistance()+" meters away.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
+        try {
+            beaconManager.startMonitoringBeaconsInRegion(new Region("1337", null, null, null));
+        } catch (Exception e) {
+
+        }
+
+        try {
+            beaconManager.startRangingBeaconsInRegion(new Region("1337", null, null, null));
+        } catch (RemoteException e) {
+
+        }
     }
 }
