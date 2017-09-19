@@ -1,10 +1,22 @@
 package xlight.xlight;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.media.RingtoneManager;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.RemoteException;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import org.altbeacon.beacon.Beacon;
 import org.altbeacon.beacon.BeaconConsumer;
@@ -16,19 +28,10 @@ import org.altbeacon.beacon.Region;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.ServiceConnection;
-import android.os.Bundle;
-import android.os.RemoteException;
-import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.util.StringBuilderPrinter;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import xlight.xlight.download.LightRequestDownloader;
 
 public class MainActivityFragment extends Fragment implements BeaconConsumer {
@@ -251,5 +254,26 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
     @Override
     public boolean bindService(Intent intent, ServiceConnection serviceConnection, int i) {
         return getActivity().bindService(intent, serviceConnection, i);
+    }
+
+    private void sendNotification(String message, String title, int id) {
+        Intent intent = new Intent(getActivity() , MainActivityFragment.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0 /* Request code */,
+                intent, PendingIntent.FLAG_ONE_SHOT);
+
+        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(getActivity())
+                .setSmallIcon(R.drawable.car)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setAutoCancel(true)
+                .setSound(defaultSoundUri)
+                .setContentIntent(pendingIntent);
+
+        NotificationManager notificationManager =
+                (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+
+        notificationManager.notify(id /* ID of notification */,
+                notificationBuilder.build());
     }
 }
