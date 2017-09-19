@@ -187,6 +187,7 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
                                     state.remoteKnown = false;
                                     state.remoteState = -1;
                                     continue;
+
                                 }
                                 state.remoteKnown = true;
                                 state.remoteState = Integer.parseInt(
