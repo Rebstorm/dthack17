@@ -23,8 +23,12 @@ import org.altbeacon.beacon.RangeNotifier;
 import org.altbeacon.beacon.Region;
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
+import xlight.xlight.download.LightRequestDownloader;
 import xlight.xlight.interfaces.UIUpdater;
 
 
@@ -38,6 +42,8 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
 
     TextView name;
     TextView distance;
+    private BeaconManager beaconManager;
+    protected static final String TAG = "BluetoothBLEListener";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -53,9 +59,24 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
         return v;
     }
 
-    private BeaconManager beaconManager;
-    protected static final String TAG = "BluetoothBLEListener";
-    private void getBeaconManager(){
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+
+        if(beaconManager != null){
+            beaconManager.unbind(this);
+        }
+
+    }
+
+    public void getBeaconManager(){
+
+        /*
+        if(beaconManager.isBound(this)){
+            beaconManager.unbind(this);
+        }
+        */
+
         try {
             beaconManager = BeaconManager.getInstanceForApplication(getApplicationContext());
             beaconManager.getBeaconParsers().add(new BeaconParser()
@@ -98,11 +119,26 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
                         @Override
                         public void run() {
                             if(r.iterator().next().getId1() != null){
-                                name.setText((r.iterator().next().getId1().toUuid().toString()));
+
+                                List<Beacon> list = new ArrayList<Beacon>(r);
+                                for(int i = 0; i < list.size(); i++){
+                                    if(list.get(i).getId1().toUuid().toString().equals("8644d8ef-b649-4a86-b40f-382f89d0bcd0")){
+                                        name.setText(list.get(i).getId1().toUuid().toString());
+                                        distance.setText("DIST: " + list.get(i).getDistance() + "\nTXPower: "
+                                                + list.get(i).getTxPower() + "\nRSSI: " + list.get(i).getRssi());
+
+                                        LightRequestDownloader downloader = new LightRequestDownloader();
+                                        downloader.execute("https://labs.basti.site/?beaconid=" + list.get(i).getId1().toUuid().toString());
+
+                                        //LightRequestDownloader.execute("https://labs.basti.site/?beaconid=" + list.get(i).getId1().toUuid().toString());
+                                        //Toast.makeText(getApplicationContext(), a, Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+
                             } else {
 
                             }
-                            distance.setText(String.valueOf(r.iterator().next().getDistance()));
+
                         }
                     });
 
