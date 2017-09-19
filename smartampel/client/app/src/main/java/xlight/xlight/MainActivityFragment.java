@@ -130,6 +130,7 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
                                         LightRequestDownloader downloader = new LightRequestDownloader();
                                         downloader.execute("https://labs.basti.site/?beaconid=" + list.get(i).getId1().toUuid().toString());
 
+
                                     }
                                 }
 
