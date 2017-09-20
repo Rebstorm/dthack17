@@ -39,6 +39,7 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
     TextView tfInfo;
     TextView tfBeaconInfo;
     private BeaconManager beaconManager;
+    private static final NotificationState NOTIFY_STATE = new NotificationState();
     protected static final String TAG = "BluetoothBLEListener";
     
     @Override
@@ -79,48 +80,16 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
         }
     }
     
-    private enum LIGHT_STATES {
-        IDLE,
-        GREEN,
-        RED,
-        YELLOW,
-        ALARM
+    private static class NotificationState {
+        boolean stateChanged;
+        
     }
     
-    private class XLightState {
-        
-        private static final double NEARBY_THRESHOLD = 2.0;
-        
-        String uuid;
-        double distance;
-        int txPower;
-        int rssi;
-        int remoteState;
-        String location;
-        boolean remoteKnown;
-        boolean lightNearby;
-        
-        @Override
-        public String toString() {
-            StringBuilder sb = new StringBuilder();
-            sb.append("UUID=").append(uuid).append("\n");
-            sb.append("DIST=").append(distance).append("\n");
-            sb.append("TXPO=").append(txPower).append("\n");
-            sb.append("RSSI=").append(rssi).append("\n");
-            sb.append("NEARBY   =").append(lightNearby);
-            if (lightNearby) {
-                sb.append("\n");
-                sb.append("REM-KNOWN=").append(remoteKnown).append("\n");
-                sb.append("REM-STATE=").append(remoteState).append("\n");
-                sb.append("LOCATION =").append(location).append("\n");
-                sb.append("LIGHT @ ").append(LIGHT_STATES.values()[remoteState]);
-            }
-            return sb.toString();
-        }
-    }
     
     @Override
     public void onBeaconServiceConnect() {
+        final MainActivityFragment thisObj = this;
+        
         beaconManager.addMonitorNotifier(new MonitorNotifier() {
             
             @Override
@@ -144,6 +113,15 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
         RangeNotifier rn = new RangeNotifier() {
             @Override
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
+    
+//                Structs.XLightState state = new Structs.XLightState();
+//                state.remoteState = 1;
+//                state.uuid = "2039124912491249124912";
+//                List<Structs.XLightState> list = new ArrayList<>();
+//                list.add(state);
+//                NotificationHandler.getInstance(thisObj)
+//                        .handleNotifications(list);
+                
                 if (beacons == null || beacons.size() < 1) {
                     return;
                 }
@@ -156,7 +134,7 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
                         }
                         Log.i(TAG, "--- pass: " + System.currentTimeMillis());
                         List<Beacon> list = new ArrayList<>(r);
-                        List<XLightState> states = new ArrayList<>();
+                        List<Structs.XLightState> states = new ArrayList<>();
                         for (int i = 0; i < list.size(); i++) {
                             if (list.get(i).getId1() == null) {
                                 continue;
@@ -164,15 +142,17 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
                             if (list.get(i).getId1().toUuid() == null) {
                                 continue;
                             }
-                            XLightState state = new XLightState();
+                            Structs.XLightState state = Structs.newXLightState();
                             state.uuid = list.get(i).getId1().toUuid().toString();
                             state.distance = list.get(i).getDistance();
+//                            state.distance = 77.0;
                             state.txPower = list.get(i).getTxPower();
                             state.rssi = list.get(i).getRssi();
                             state.remoteKnown = false;
                             state.remoteState = -1;
                             // check if we're in range
-                            state.lightNearby = state.distance <= XLightState.NEARBY_THRESHOLD;
+                            state.lightNearby = state.distance <=
+                                    Structs.XLightState.NEARBY_THRESHOLD;
                             
                             LightRequestDownloader downloader = new LightRequestDownloader();
                             JSONArray a;
@@ -189,10 +169,8 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
                                 
                                 if (payload.get("beaconid") == null ||
                                         ((String) payload.get("beaconid")).isEmpty()) {
-                                    state.remoteKnown = false;
-                                    state.remoteState = -1;
                                     continue;
-
+                                    
                                 }
                                 state.remoteKnown = true;
                                 state.remoteState = Integer.parseInt(
@@ -214,13 +192,13 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
                         }
                         
                         StringBuilder sb = new StringBuilder();
-                        for (XLightState state : states) {
+                        for (Structs.XLightState state : states) {
                             sb.append(state.toString()).append("\n-----------\n");
                         }
                         tfBeaconInfo.setText(sb.toString());
                         
-                        // Here I'd call some method if I found new valid information..
-                        // call(states)
+                        NotificationHandler.getInstance(thisObj)
+                                .handleNotifications(states);
                     }
                 });
             }
@@ -255,25 +233,5 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
     public boolean bindService(Intent intent, ServiceConnection serviceConnection, int i) {
         return getActivity().bindService(intent, serviceConnection, i);
     }
-
-    private void sendNotification(String message, String title, int id) {
-        Intent intent = new Intent(getActivity() , MainActivityFragment.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0 /* Request code */,
-                intent, PendingIntent.FLAG_ONE_SHOT);
-
-        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(getActivity())
-                .setSmallIcon(R.drawable.car)
-                .setContentTitle(title)
-                .setContentText(message)
-                .setAutoCancel(true)
-                .setSound(defaultSoundUri)
-                .setContentIntent(pendingIntent);
-
-        NotificationManager notificationManager =
-                (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
-
-        notificationManager.notify(id /* ID of notification */,
-                notificationBuilder.build());
-    }
+    
 }
