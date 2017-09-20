@@ -26,6 +26,7 @@
                     tools:layout_editor_absoluteX="8dp">
 
                     <android.support.v7.widget.AppCompatTextView
+                        android:visibility="invisible"
                         android:id="@+id/menu_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -206,6 +207,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:visibility="invisible"
                 android:id="@+id/connected_to_bar"
                 android:layout_width="match_parent"
                 android:layout_below="@id/quick_settings_bar"
