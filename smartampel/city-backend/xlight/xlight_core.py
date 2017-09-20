@@ -7,7 +7,7 @@ import threading
 
 class XLightHandler ():
 
-    SIMULATION_INTERVAL_S = 10
+    SIMULATION_INTERVAL_S = 15
 
     def run_simulator(self):
         while True:
