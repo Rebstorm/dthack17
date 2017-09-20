@@ -99,7 +99,7 @@ class NotificationHandler {
         notificationBuilder.setContentText(message);
         notificationBuilder.setStyle(new NotificationCompat.BigTextStyle()
                 .bigText(message));
-        notificationBuilder.setVibrate(new long[]{1000});
+        notificationBuilder.setVibrate(new long[]{0, 500});
         notificationBuilder.setLights(Color.GREEN, 3000, 3000);
         notificationBuilder.setSound(defaultSoundUri);
         notificationBuilder.setPriority(Notification.PRIORITY_MAX);
