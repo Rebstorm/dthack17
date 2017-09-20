@@ -25,14 +25,6 @@
                     tools:layout_editor_absoluteY="8dp"
                     tools:layout_editor_absoluteX="8dp">
 
-                    <android.support.v7.widget.AppCompatTextView
-                        android:visibility="invisible"
-                        android:id="@+id/menu_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:text="Menu"/>
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:orientation="horizontal"
@@ -212,26 +204,6 @@
                 android:layout_width="match_parent"
                 android:layout_below="@id/quick_settings_bar"
                 android:layout_height="120dp">
-
-
-                <TextView
-                    android:layout_marginLeft="8dp"
-                    android:id="@+id/connected_text_textview"
-                    android:layout_width="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_height="wrap_content"
-                    android:text="Connected to "
-                    android:textSize="24sp"/>
-
-                <TextView
-                    android:id="@+id/connected_answer_textview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bonn, Innenstad. "
-                    android:textSize="24sp"
-                    android:layout_alignBaseline="@+id/connected_text_textview"
-                    android:layout_alignBottom="@+id/connected_text_textview"
-                    android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
 
