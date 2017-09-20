@@ -56,7 +56,7 @@ class NotificationHandler {
         if (!uuid2LastState.containsKey(state.uuid)
                 && state.lightNearby) {
             uuid2LastState.put(state.uuid, state.remoteState);
-            createXLightNotify(Structs.LIGHT_STATES.values()[state.remoteState] + " LIGHT!");
+            createXLightNotify(Structs.LIGHT_STATES.values()[state.remoteState] + " LIGHT!\n" + state.location);
             return;
         }
         
@@ -74,7 +74,7 @@ class NotificationHandler {
         }
         
         uuid2LastState.put(state.uuid, state.remoteState);
-        createXLightNotify(Structs.LIGHT_STATES.values()[state.remoteState] + " LIGHT!");
+        createXLightNotify(Structs.LIGHT_STATES.values()[state.remoteState] + " LIGHT!\n" + state.location);
         
     }
     
