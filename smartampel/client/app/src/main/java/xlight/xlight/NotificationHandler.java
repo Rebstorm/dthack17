@@ -72,10 +72,10 @@ class NotificationHandler {
             uuid2LastState.remove(state.uuid);
             return;
         }
-    
+        
         uuid2LastState.put(state.uuid, state.remoteState);
         createXLightNotify(Structs.LIGHT_STATES.values()[state.remoteState] + " LIGHT!");
-
+        
     }
     
     private void removeNotification() {
@@ -99,7 +99,7 @@ class NotificationHandler {
         notificationBuilder.setContentText(message);
         notificationBuilder.setStyle(new NotificationCompat.BigTextStyle()
                 .bigText(message));
-        notificationBuilder.setVibrate(new long[]{1000, 1000, 1000, 1000, 1000});
+        notificationBuilder.setVibrate(new long[]{1000});
         notificationBuilder.setLights(Color.GREEN, 3000, 3000);
         notificationBuilder.setSound(defaultSoundUri);
         notificationBuilder.setPriority(Notification.PRIORITY_MAX);

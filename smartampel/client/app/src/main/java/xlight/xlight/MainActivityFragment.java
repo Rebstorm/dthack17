@@ -73,7 +73,10 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
             beaconManager = BeaconManager.getInstanceForApplication(getApplicationContext());
             beaconManager.getBeaconParsers().add(new BeaconParser()
                     .setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24"));
+            beaconManager.setForegroundScanPeriod(250);
             beaconManager.bind(this);
+            Log.i(TAG, "-- betw-scan-period=" + beaconManager.getForegroundBetweenScanPeriod());
+            Log.i(TAG, "-- scan-period=" + beaconManager.getForegroundScanPeriod());
             Toast.makeText(getApplicationContext(), "Started listening for iBeacons", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             Log.e(TAG, e.getMessage(), e.getCause());
@@ -114,14 +117,6 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
             @Override
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
     
-//                Structs.XLightState state = new Structs.XLightState();
-//                state.remoteState = 1;
-//                state.uuid = "2039124912491249124912";
-//                List<Structs.XLightState> list = new ArrayList<>();
-//                list.add(state);
-//                NotificationHandler.getInstance(thisObj)
-//                        .handleNotifications(list);
-                
                 if (beacons == null || beacons.size() < 1) {
                     return;
                 }
@@ -132,7 +127,7 @@ public class MainActivityFragment extends Fragment implements BeaconConsumer {
                         if (r.iterator().next().getId1() == null) {
                             return;
                         }
-                        Log.i(TAG, "--- pass: " + System.currentTimeMillis());
+//                        Log.i(TAG, "--- pass: " + System.currentTimeMillis());
                         List<Beacon> list = new ArrayList<>(r);
                         List<Structs.XLightState> states = new ArrayList<>();
                         for (int i = 0; i < list.size(); i++) {
