@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context="xlight.xlight.MainActivityFragment"
+    tools:showIn="@layout/activity_main">
+
+
+    <ScrollView
+        android:background="@color/appBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                    android:id="@+id/buttonbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:paddingTop="0dp"
+                    tools:layout_editor_absoluteY="8dp"
+                    tools:layout_editor_absoluteX="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:layout_below="@+id/menu_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/pedestrian_image"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/border"
+                        android:padding="8dp"
+                        android:src="@drawable/pedestrian_walking" />
+
+                    <ImageView
+                        android:id="@+id/car_image"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/car"
+                        android:background="@drawable/border"
+                        android:padding="8dp"
+                        android:layout_toRightOf="@id/pedestrian_image" />
+
+                    <ImageView
+                        android:id="@+id/other_image"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:layout_toRightOf="@id/car_image"
+                        android:background="@drawable/border"
+                        android:padding="8dp"
+                        android:src="@drawable/bike" />
+
+
+                </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/settings_bar"
+                android:layout_below="@id/buttonbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/option_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text_setting"
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notify Light"/>
+
+                    <ImageView
+                        android:id="@+id/brightness_setting"
+                        android:layout_below="@+id/text_setting"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/brightness"/>
+
+                    <TextView
+                        android:layout_below="@id/brightness_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:text="Red/Green"/>
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/option_set_setting"
+                    android:layout_toRightOf="@+id/option_setting"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/setting_never_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:text="Never"/>
+                    <Button
+                        android:id="@+id/setting_display_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="When Display On"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@+id/setting_never_buttoning"
+                        android:text="Always"/>
+
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/quick_settings_bar"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/settings_bar"
+                android:layout_alignParentStart="true">
+
+
+                <RelativeLayout
+                    android:id="@+id/quick_setting_vibration_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/quick_settings_vibration_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:text="Vibration"
+                        android:textSize="24sp"/>
+
+                    <Switch
+                        android:layout_toRightOf="@+id/quick_settings_vibration_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/quick_setting_sound_bar"
+                    android:layout_below="@+id/quick_setting_vibration_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/quick_setting_sound_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:text="Sound"
+                        android:textSize="24sp"/>
+
+                    <Switch
+                        android:layout_toRightOf="@+id/quick_setting_sound_textview"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="invisible"
+                android:id="@+id/connected_to_bar"
+                android:layout_width="match_parent"
+                android:layout_below="@id/quick_settings_bar"
+                android:layout_height="1dp">
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:visibility="visible"
+                android:id="@+id/debug_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/connected_to_bar">
+
+                <TextView
+                    android:id="@+id/ibeacon_name_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="iBeacon Name"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/ibeacon_range_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/ibeacon_name_textview"
+                    android:text="iBeacon Details"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
