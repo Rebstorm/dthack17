@@ -4,7 +4,7 @@
 
 Submit your ideas for the City of the Future and take part in the Smart City Public Life Hackathon. Whether you're a developer, a designer or a newbie – we want you!
 
-* **Developers/Professionals** (***only a few left***):  
+* **Developers/Professionals** (***SOLD OUT***):  
   Together with your team and a designer, you will develop great ideas and program a prototyping solution within 24 hours.
 * **Designers and concept developers** (***SOLD OUT***):  
   From the ideation phase (led by you) through the implementation of your design idea/architecture or user experience expertise, your know-how is needed in many different ways.
@@ -17,6 +17,10 @@ Submit your ideas for the City of the Future and take part in the Smart City Pub
 Make life more comfortable for people living in cities – all on the topic of "Smart Public Life." Over the next few weeks, we will present potential topics, technologies and data that could help you develop a good idea and then realize it at the hackathon.
 
 You can find more information on the [official site](https://www.telekom.com/en/company/public-life-hackathon)
+
+## Results
+
+You can find the results for the different teams in the ```results``` subfolder. If you are interested in the final video you can download it from [here](https://www.magentacloud.de/lnk/TeMS4bUj#file)
 
 ## Documentation
 Examples and documentation for the Deutsche Telekom Hackathon on 19/20 September in Bonn
