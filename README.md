@@ -32,7 +32,7 @@ You can find more information on the [official site](https://www.telekom.com/en/
 | 8 | #11 - Smart City Radar | 295 |
 | 9 | #1 - Unfall Warnsystem | 284 |
 | 10 | #22- Q Tracker | 281 |
-| 11 | #19 - Hol-Mich Defribrilatoren | 276 |
+| 11 | #13 - Hol-Mich Defribrilatoren | 276 |
 | 12 | #17 - DT Pickup | 275 |
 | 13 | #5 - TAKING SEAT | 270 |
 | 14 | #8 - Open Data Hub | 269 |
