@@ -20,30 +20,30 @@ You can find more information on the [official site](https://www.telekom.com/en/
 
 ## Results
 
-| Rank | Team - Name | Points |
-| ------ | ------ | ------ |
-| 1 | #9 - Smart City Hub | 414 |
-| 2 | #14 - Be on Track | 389 |  
-| 3 | #2 - Pollution Buttler | 368 |
-| 4 | #3 - RODAR | 338 |
-| 5 | #18 - Residential PARKING | 332 |
-| 6 | #20 - Walk this way | 310 |
-| 7 | #7 - HELP TO GO | 300 |
-| 8 | #11 - Smart City Radar | 295 |
-| 9 | #1 - Unfall Warnsystem | 284 |
-| 10 | #22- Q Tracker | 281 |
-| 11 | #13 - Hol-Mich Defribrilatoren | 276 |
-| 12 | #17 - DT Pickup | 275 |
-| 13 | #5 - TAKING SEAT | 270 |
-| 14 | #8 - Open Data Hub | 269 |
-| 15 | #4 - Cityzen | 256 |
-| 16 | #23 - ZIPO BIKE | 233 |
-| 17 | #15 - X Light | 229 |
-| 18 | #21 - CITY Trees | 217 |
-| 19 | #6 - IOTREE | 199 |
-| 20 | #16 - SMART COFFEE CORNER | 192 |
-| 21 | #19 - CITY BAND | 174 |
-| 22 | #12 - Dezentraliced EV Charging Management System | 162 |
+| Rank | Team | Name | Points |
+| ------ | ------ | ------ | ------ |
+| 1 | 9 | Smart City Hub | 414 |
+| 2 | 14 | Be on Track | 389 |  
+| 3 | 2 | Pollution Buttler | 368 |
+| 4 | 3 | RODAR | 338 |
+| 5 | 18 | Residential PARKING | 332 |
+| 6 | 20 | Walk this way | 310 |
+| 7 | 7 | HELP TO GO | 300 |
+| 8 | 11 | Smart City Radar | 295 |
+| 9 | 1 | Unfall Warnsystem | 284 |
+| 10 | 22 | Q Tracker | 281 |
+| 11 | 13 | Hol-Mich Defribrilatoren | 276 |
+| 12 | 17 | DT Pickup | 275 |
+| 13 | 5 | TAKING SEAT | 270 |
+| 14 | 8 | Open Data Hub | 269 |
+| 15 | 4 | Cityzen | 256 |
+| 16 | 23 | ZIPO BIKE | 233 |
+| 17 | 15 | X Light | 229 |
+| 18 | 21 | CITY Trees | 217 |
+| 19 | 6 | IOTREE | 199 |
+| 20 | 16 | SMART COFFEE CORNER | 192 |
+| 21 | 19 | CITY BAND | 174 |
+| 22 | 12 | Dezentraliced EV Charging Management System | 162 |
 
 You can find the results for the different teams in the ```results``` subfolder. If you are interested in the final video you can download it from [here](https://www.magentacloud.de/lnk/TeMS4bUj#file)
 
